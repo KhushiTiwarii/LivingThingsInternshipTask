@@ -52,7 +52,7 @@ import clientPromise from "@/lib/db"
 import { EnergyData } from "@/models/EnergyData"
 import { ObjectId } from "mongodb"
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const client = await clientPromise
     const db = client.db("energy_analytics")

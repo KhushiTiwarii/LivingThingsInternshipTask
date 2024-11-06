@@ -184,8 +184,8 @@ export default function EnergyDashboard() {
     <Card className="w-full max-w-4xl mx-auto">
       <CardHeader>
       <CardTitle>Energy Consumed </CardTitle>
-      {algoStatus==='1' && <CardTitle className=" text-red-600">Log Access 'ON' </CardTitle>}
-      {algoStatus==='0' && <CardTitle className=" text-red-600">LogAccess 'OFF'</CardTitle>}      
+      {algoStatus==='1' && <CardTitle className=" text-red-600">Log Access &apos;ON&apos; </CardTitle>}
+      {algoStatus==='0' && <CardTitle className=" text-red-600">LogAccess &apos;OFF&apos;</CardTitle>}      
         <div className="flex items-center space-x-4">
           {algoStatus==="" && <div className="flex items-center space-x-2">
             <Checkbox 

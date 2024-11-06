@@ -1,7 +1,6 @@
 import { NextAuthOptions } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter"
-import { JWT } from "next-auth/jwt"
 import clientPromise from "./db"
 import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken"
@@ -108,7 +107,7 @@ export const authOptions: NextAuthOptions = {
 export const verifyToken = (token: string) => {
   try {
     return jwt.verify(token, process.env.JWT_SECRET!) as { userId: string; email: string }
-  } catch (error) {
+  } catch {
     return null
   }
 }
